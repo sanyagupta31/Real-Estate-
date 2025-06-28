@@ -1,86 +1,86 @@
 
 
-```markdown
-# 🏠 Real Estate Price Prediction Web App
+**Real Estate Price Prediction App**
 
-This is a Python-based web application built using [Dash](https://dash.plotly.com/) that predicts the **house price per unit area** based on:
+A Python web app built using Dash that predicts **house price per unit area** based on:
 
-- Distance to the nearest MRT station
-- Number of convenience stores nearby
-- Latitude
-- Longitude
-
-The prediction model is trained using **Linear Regression** from `scikit-learn`.
-
----
-
-## 🔮 Features
-
-- Real-time price prediction based on user input
-- Clean and responsive Dash UI
-- Trained using real housing data
-- Easily extendable (add map input, more features, ML models)
+* Distance to the nearest MRT station
+* Number of convenience stores nearby
+* Latitude and Longitude
 
 ---
 
 
 
-## 📂 File Structure
+**App Overview**
+
+This app:
+
+* Uses a trained **Linear Regression** model (from scikit-learn)
+* Loads the model from a `.pkl` file
+* Accepts user input via interactive fields
+* Predicts the house price instantly
+
+---
+
+**Project Folder Structure**
 
 ```
-
 real-estate-price-app/
-├── app.py                 # Dash application
-├── model\_training.py      # Optional: model training script
-├── real\_estate\_model.pkl  # Saved regression model
-├── requirements.txt       # Required Python packages
-└── README.md              # This file
-
-````
-
----
-
-## 📦 Installation (Local Setup)
-
-```bash
-# Clone the repo
-git clone https://github.com/your-username/real-estate-price-app.git
-cd real-estate-price-app
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the app
-python app.py
-````
-
----
-
-## 📈 Sample Data Used
-
-The dataset used includes information about housing prices in relation to MRT station distance, convenience stores, and location coordinates.
-
----
-
-## ✨ Future Enhancements
-
-* Add map input for selecting location
-* Include total area or number of rooms
-* Support for multiple ML models (Random Forest, XGBoost, etc.)
-* Deploy to Heroku or AWS Lambda
-
----
-
-## 🧑‍💻 Author
-
-Made with ❤️ by [Your Name](https://github.com/sanyagupta31)
-
+│
+├── app.py                 --> Dash app frontend + backend
+├── model_training.py      --> Script to train the ML model (optional)
+├── real_estate_model.pkl  --> Pre-trained model (via joblib)
+├── requirements.txt       --> Python dependencies
+└── README.md              --> Project description (this file)
 ```
 
 ---
+
+**How to Run Locally**
+
+1. Clone the repository
+   `git clone https://github.com/your-username/real-estate-price-app.git`
+
+2. Navigate into the folder
+   `cd real-estate-price-app`
+
+3. Create and activate virtual environment (optional but recommended)
+   `python -m venv venv`
+   `source venv/bin/activate` (on Windows: `venv\Scripts\activate`)
+
+4. Install dependencies
+   `pip install -r requirements.txt`
+
+5. Run the app
+   `python app.py`
+
+6. Open your browser and visit
+   `http://127.0.0.1:8050`
+
+---
+
+**Requirements**
+
+* dash
+* pandas
+* scikit-learn
+* joblib
+* gunicorn (for deployment)
+
+These are listed in `requirements.txt`.
+
+---
+
+**Future Enhancements**
+
+* Add interactive map input
+* Upgrade to Random Forest or XGBoost models
+* Display neighborhood analytics or trends
+* Add historical price charts
+
+---
+
+**Made with ❤️ by sanya**
 
 
